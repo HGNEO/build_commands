@@ -2,7 +2,7 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/WitAqua/manifest.git -b 15.2 --git-lfs; \
+repo init -u https://github.com/Black-Iron-Project/manifest -b v15_QPR2 --git-lfs; \
 /opt/crave/resync.sh; \
 /opt/crave/resync.sh; \
 
@@ -19,7 +19,8 @@ git clone https://gitlab.com/rik-x777/kernel_xiaomi_sm8250 kernel/xiaomi/sm8250;
 git clone https://github.com/LineageOS/android_hardware_xiaomi hardware/xiaomi; \
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings; \
 git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX; \
+git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
 . build/envsetup.sh; \
-breakfast munch; \
-brunch munch
+blkilunch munch userdebug; \
+blki b
